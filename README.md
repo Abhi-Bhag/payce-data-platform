@@ -94,14 +94,33 @@ Each mart is a star schema. One fact table in the middle with the numbers, dimen
 
 ## Dashboard
 
-<!-- Add dashboard screenshots + link once published -->
-![Dashboard](docs/dashboard.png)
+Built in Databricks AI/BI, sitting directly on the Gold tables. Three pages, one per mart, and each page has its own filters. Every page follows the same layout: the health numbers up top (KPIs), then where the risk is concentrated (charts), then a table you can actually act on.
 
-Built in Databricks AI/BI, sitting directly on the Gold tables. It has three pages, one per mart, and each page has its own filter.
+The screenshots below show all three pages. The dashboard was published in Databricks, but the live link sits behind a Databricks workspace login, so it won't open for external viewers — the screenshots are the best way to see it. (Live link, for reference: [Databricks dashboard](https://dbc-6766d642-c684.cloud.databricks.com/dashboardsv3/01f1717e29681a5f9b7279a64b75da5f/published?o=7474649544931900) — requires workspace access.)
 
-The thing that jumped out at me: fraud only appears in TRANSFER (0.77%) and CASH_OUT (0.18%) transactions. The other three types have none at all. Makes sense once you think about it, since the usual play is to move money out of an account you've taken over and then cash it out.
+### Fraud
 
-[Dashboard link](#) <!-- add once published -->
+<img width="2870" height="1290" alt="image" src="https://github.com/user-attachments/assets/077c79c4-0b8a-4742-97d5-c339f568bad3" />
+
+The thing that jumped out at me: fraud only appears in TRANSFER (0.77%) and CASH_OUT (0.18%) transactions. The other three types have none at all. And when you break it down by hour, fraud spikes hard overnight (around 3–5am, hitting ~22%) and is near zero during the day. Makes sense once you think about it, since the usual play is to move money out of an account you've taken over and cash it out when no one's watching.
+
+### Credit Risk
+
+<img width="2866" height="1276" alt="image" src="https://github.com/user-attachments/assets/8322e111-1aea-4bfd-a3c4-c5dc56476d10" />
+
+Default rate climbs cleanly with the loan grade: about 7% for low-risk loans, 17% for medium, and 31% for high-risk. That's the grade doing its job as a real risk signal. The exposure column is shown as an average per loan rather than a total, so a segment doesn't look scary just because it has more loans in it.
+
+### Customer
+
+<img width="2872" height="1284" alt="image" src="https://github.com/user-attachments/assets/92dd5905-f482-4eb8-ae31-73599264d5fd" />
+
+This one has an honest finding: income barely predicts default. Splitting customers into income thirds gives default rates of roughly 8% / 9% / 7% — basically flat. So in this data, income on its own isn't telling you much about who defaults; the signal is somewhere else (credit history, existing debt). That's a real result, not a bug.
+
+---
+
+## A note on the money values
+
+The Home Credit data records income and credit amounts in an anonymised foreign currency, so the raw numbers are large next to what you'd expect in pounds (average recorded income is around 150,000+). The pipeline preserves source values as they are, it doesn't quietly rescale them, because that's not the pipeline's job. For the dashboard I put a £ label on the amounts for readability, and I segment customers by relative income percentile rather than treating the absolute figures as real GBP. So the risk relationships hold up; the exact pound figures are illustrative. Same goes for the PaySim fraud amounts, which are large because the synthetic fraud transactions tend to drain whole balances.
 
 ---
 
@@ -132,13 +151,4 @@ payce-data-platform/
 ```
 
 ---
-
-## Docs
-
-- [Business Requirements Document](docs/Payce_BRD.md)
-- Data model diagrams (Lucidchart)
-
----
-
-<!-- add your contact -->
 [LinkedIn](#) · [GitHub](#)
