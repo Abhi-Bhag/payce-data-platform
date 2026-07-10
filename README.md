@@ -8,8 +8,7 @@ It processes about 96 million rows in total.
 
 ## Architecture
 
-<!-- Add your architecture diagram here -->
-![Architecture](docs/architecture.png)
+<img width="1042" height="578" alt="image" src="https://github.com/user-attachments/assets/9a086da5-d9e0-4303-894b-c57f86f02245" />
 
 ```
 Sources → Bronze (raw) → Silver (cleaned) → Gold (marts) → Dashboard
