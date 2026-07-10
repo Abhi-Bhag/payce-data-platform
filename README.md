@@ -150,4 +150,4 @@ payce-data-platform/
 ```
 
 ---
-[LinkedIn](#) · [GitHub](#)
+[LinkedIn](https://www.linkedin.com/in/atharvarajeshbhagwat) · [GitHub](https://github.com/Abhi-Bhag/payce-data-platform)
