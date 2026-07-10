@@ -85,8 +85,8 @@ Three star schemas, 11 tables between them.
 
 ## Data model
 
-<!-- Add your Lucidchart export here -->
-![Data model](docs/data_model.png)
+<img width="2290" height="922" alt="image" src="https://github.com/user-attachments/assets/9bca87e1-e059-403b-8912-48f46df5eeba" />
+
 
 Each mart is a star schema. One fact table in the middle with the numbers, dimension tables around it with the labels, joined by surrogate keys.
 
