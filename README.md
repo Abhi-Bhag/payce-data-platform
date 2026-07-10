@@ -1,3 +1,5 @@
+<img src="docs/payce_logo.png" width="300"/>
+
 # Payce — BNPL Data Platform
 
 Payce is a made-up Buy Now Pay Later company. I built a full data pipeline for it on Databricks and AWS, going from raw files all the way to a set of data marts and a dashboard. The datasets are real financial data; the BNPL company is just the story I wrapped around them.
