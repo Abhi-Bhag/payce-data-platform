@@ -115,7 +115,7 @@ Default rate climbs cleanly with the loan grade: about 7% for low-risk loans, 17
 
 <img width="2872" height="1284" alt="image" src="https://github.com/user-attachments/assets/92dd5905-f482-4eb8-ae31-73599264d5fd" />
 
-This one has an honest finding: income barely predicts default. Splitting customers into income thirds gives default rates of roughly 8% / 9% / 7% — basically flat. So in this data, income on its own isn't telling you much about who defaults; the signal is somewhere else (credit history, existing debt). That's a real result, not a bug.
+This one has an honest finding: income barely predicts default. Splitting customers into income thirds gives default rates of roughly 8% / 9% / 7% - basically flat. So in this data, income on its own isn't telling you much about who defaults; the signal is somewhere else (credit history, existing debt). That's a real result, not a bug.
 
 ---
 
