@@ -101,7 +101,7 @@ The screenshots below show all three pages. The dashboard was published in Datab
 
 ### Fraud
 
-<img width="2870" height="1290" alt="image" src="https://github.com/user-attachments/assets/077c79c4-0b8a-4742-97d5-c339f568bad3" />
+<img width="2844" height="1284" alt="image" src="https://github.com/user-attachments/assets/663f3d1e-cddc-48f8-ab36-6b22d80cbf93" />
 
 The thing that jumped out at me: fraud only appears in TRANSFER (0.77%) and CASH_OUT (0.18%) transactions. The other three types have none at all. And when you break it down by hour, fraud spikes hard overnight (around 3–5am, hitting ~22%) and is near zero during the day. Makes sense once you think about it, since the usual play is to move money out of an account you've taken over and cash it out when no one's watching.
 
